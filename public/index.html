@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Simple Blogging Platform</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo">📝 BlogSpace</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <!-- Shown only when user IS logged in -->
+            <span id="navLoggedIn" class="hidden">
+                <a href="create.html">+ Create Blog</a>
+                <span id="navUsername"></span>
+                <button id="logoutBtn" class="btn-secondary" style="background:none;border:1px solid #dbe3ee;cursor:pointer;">Logout</button>
+            </span>
+
+            <!-- Shown only when user is NOT logged in -->
+            <span id="navLoggedOut" class="hidden">
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn-primary-link">Register</a>
+            </span>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+        <div class="page-header">
+            <h1>Welcome to BlogSpace</h1>
+            <p>Read stories from the community, or share your own.</p>
+        </div>
+
+        <!-- All blogs will be loaded here dynamically by script.js -->
+        <div id="blogGrid" class="blog-grid">
+            <div class="empty-state">Loading blogs...</div>
+        </div>
+    </main>
+
+    <footer>
+        Simple Blogging Platform &mdash; Built with Node.js, Express &amp; MySQL
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog | Simple Blogging Platform</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo">📝 BlogSpace</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <span id="navLoggedIn" class="hidden">
+                <a href="create.html">+ Create Blog</a>
+                <span id="navUsername"></span>
+                <button id="logoutBtn" class="btn-secondary" style="background:none;border:1px solid #dbe3ee;cursor:pointer;">Logout</button>
+            </span>
+            <span id="navLoggedOut" class="hidden">
+                <a href="login.html">Login</a>
+                <a href="register.html" class="btn-primary-link">Register</a>
+            </span>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+        <div class="form-card" style="max-width: 640px;">
+            <h2>Write a New Blog</h2>
+            <p class="sub-text">Share your thoughts with the BlogSpace community.</p>
+
+            <div id="createMessage" class="message-box"></div>
+
+            <!-- Note: if the user is not logged in, the server will reject
+                 the request with a clear "please login" message. -->
+            <form id="createForm">
+                <div class="form-group">
+                    <label for="title">Blog Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter an interesting title" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Blog Content</label>
+                    <textarea id="content" name="content" placeholder="Write your blog content here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Publish Blog</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        Simple Blogging Platform &mdash; Built with Node.js, Express &amp; MySQL
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
